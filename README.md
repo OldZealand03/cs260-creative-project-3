@@ -1,5 +1,10 @@
 # creative-project-3
 
+Created By:
+    1. Isaac Smith
+    2. Vivian Solgere
+
+
 ## Project setup
 ```
 npm install
