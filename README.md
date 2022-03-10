@@ -3,7 +3,7 @@
 Created By:
     1. Isaac Smith
     2. Vivian Solgere
-    
+
 
 https://newsapi.org/
 
@@ -30,3 +30,5 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+testing
