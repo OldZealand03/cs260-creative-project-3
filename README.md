@@ -3,6 +3,9 @@
 Created By:
     1. Isaac Smith
     2. Vivian Solgere
+    
+
+https://newsapi.org/
 
 
 ## Project setup
