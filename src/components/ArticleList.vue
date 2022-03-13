@@ -1,8 +1,15 @@
 <template>
   <div class="wrapper">
     <div class="articles">
-      <div class="article">
-        
+      <div class="title">
+      <h2>Results</h2>
+    </div>
+      <div class="article" v-for="item in 20" :key="item">
+        <h3>{{ articles[item].title}}</h3>
+        <p>{{articles[item].author}}<p>
+        <p>{{articles[item].source.name}}<p>
+        <p>{{  articles[item].publishedAt  }}</p> 
+        <!-- Find a way to parse this date above ^^ -->
       </div>
     </div>
   </div>
@@ -11,12 +18,15 @@
 <script>
 export default {
   name: "ArticleList",
-//   props: {
-//     products: Array,
-//   },
-  methods: {
-    
+  props: ['propsdata'],
+  data() {
+    return {
+      obj: this.propsdata
+    }
   },
+  // methods: {
+    
+  // },
 };
 </script>
 

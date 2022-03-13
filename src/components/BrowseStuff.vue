@@ -7,6 +7,9 @@
           <i class="fas fa-search"></i><input v-model="searchText" />
         </form>
       </div>
+    <div class="button">
+      <button @click="callAPI">GO!</button>
+    </div>
     </div>
     <p>Why is the right side of the search box not colored? ^^^</p>
     <ArticleList :articles="articles" />
@@ -19,18 +22,31 @@ import ArticleList from "../components/ArticleList.vue";
 // let testQuery = "tesla";
 // callAPI(testQuery);
 
+// var json_object;
+
 export default {
   name: "BrowseStuff",
   components: {
     ArticleList,
   },
+  computed: {
+   
+  },
   methods: {
     callAPI(userInput) {
-      let u1 = "https://newsapi.org/v2/everything?q=";
-      let u2 =
-        "&from=2022-02-11&sortBy=publishedAt&apiKey=27ba76b43e724c38a32517d7b92abba4";
 
-      let url = u1 + userInput + u2;
+      var today = new Date()
+
+      userInput = "tesla"
+
+      let u1 = "https://newsapi.org/v2/everything?q=";
+      let u2 = "&from=2022-02-";
+      let day = String(today.getDate()+1);
+      console.log(day);
+      let u3 = "&sortBy=publishedAt&apiKey=27ba76b43e724c38a32517d7b92abba4";
+
+      let url = u1 + userInput + u2 + day + u3;
+      console.log(url)
 
       fetch(url)
         .then(function (response) {
@@ -39,7 +55,10 @@ export default {
         .then(function (json) {
           console.log(json);
           console.log(json.articles[0].author);
+          // let articles = json;
+          // Figure out a way to pass this json object as a property to the next BrowseStuff vue
         });
+            
     },
   },
   //   props: {
