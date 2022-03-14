@@ -3,11 +3,11 @@
     <h1>Your Saved Articles</h1>
     <div class="wrapper">
     </div>
-    //<ArticleList :articles="list" />
-  //</div>
+  </div>
 </template>
 
 <script>
+
 export default {
   name: "SavedArticles",
   props: {articles:Array},
@@ -17,6 +17,7 @@ export default {
     }
   },
   methods: {
+
  },
 };
 </script>

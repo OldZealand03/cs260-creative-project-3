@@ -3,6 +3,8 @@ import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 
 import BrowseStuff from '../views/BrowseView.vue'
+import SavedArticles from '../components/SavedArticles.vue'
+
 
 
 Vue.use(VueRouter)
@@ -29,8 +31,9 @@ const routes = [
   {
     path: '/saved',
     name: 'Saved-articles',
-    //component: SavedArticles
+    component: SavedArticles
   },
+
 ]
 
 const router = new VueRouter({
