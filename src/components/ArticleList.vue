@@ -10,6 +10,7 @@
         <p>{{ item.source.name}}<p>
         <p>{{  item.publishedAt  }}</p>
         <!-- Find a way to parse this date above ^^ -->
+        <button class= "auto" @click="addToSaved(item)">Save Article</button>
       </div>
     </div>
   </div>
@@ -24,9 +25,11 @@ export default {
       obj: this.propsdata
     }
   },
-  // methods: {
-
-  // },
+  methods: {
+    addToSaved(item){
+      this.$root.$data.saved.push(item)
+    },
+ },
 };
 </script>
 

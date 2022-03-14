@@ -26,6 +26,11 @@ const routes = [
     name: 'Browse-stuff',
     component: BrowseStuff
   },
+  {
+    path: '/saved',
+    name: 'Saved-articles',
+    //component: SavedArticles
+  },
 ]
 
 const router = new VueRouter({
