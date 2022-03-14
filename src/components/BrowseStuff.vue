@@ -12,7 +12,11 @@
     </div>
     </div>
     <p>Why is the right side of the search box not colored? ^^^</p>
-    <ArticleList :articles="articles" />
+    <ArticleList :articles="list" />
+
+
+
+
   </div>
 </template>
 
@@ -29,15 +33,19 @@ export default {
   components: {
     ArticleList,
   },
-  computed: {
-   
+  data(){
+    return {
+      searchText: "tesla",
+      list: []
+    }
   },
   methods: {
-    callAPI(userInput) {
+    callAPI() {
 
       var today = new Date()
-
-      userInput = "tesla"
+      let self = this;
+      let userInput = this.searchText;
+      console.log(userInput);
 
       let u1 = "https://newsapi.org/v2/everything?q=";
       let u2 = "&from=2022-02-";
@@ -53,12 +61,13 @@ export default {
           return response.json();
         })
         .then(function (json) {
-          console.log(json);
+          console.log(json.articles);
           console.log(json.articles[0].author);
+          self.list = json.articles;
           // let articles = json;
           // Figure out a way to pass this json object as a property to the next BrowseStuff vue
         });
-            
+
     },
   },
   //   props: {
