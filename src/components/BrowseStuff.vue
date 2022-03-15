@@ -1,6 +1,6 @@
 <template>
   <div class="browse">
-    <h1>Browse</h1>
+    <h1>Find Any News</h1>
     <div class="wrapper">
       <div class="search">
         <form class="pure-form">
@@ -30,7 +30,7 @@ export default {
   },
   data(){
     return {
-      searchText: "Kanye",
+      searchText: "",
       list: []
     }
   },

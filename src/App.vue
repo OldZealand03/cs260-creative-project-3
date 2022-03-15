@@ -13,6 +13,10 @@
           <!-- <img height='50px' width='50px' src="GitHub-Mark-120px-plus.png"> -->
           Github
         </a>
+        <br>
+        Isaac Smith,
+        <br>
+        Vivian Solgere
       </div>
     </div>
   </div>
@@ -41,16 +45,17 @@ nav a.router-link-exact-active {
 }
 
 .footer {
-  position: absolute;
-  background-color: #fff;
-  height: 15px;
-  text-align: center;
-  align-items: center;
+  position: fixed;
+  bottom: 0%;
+  width: 100%;
+  height: 50px;
+  text-align: left;
+  align-items: left;
   font-size: 15px;
   color: #000;
   display: flex;
-  justify-content: center;
-  margin-bottom: 10px;
+  justify-content: left;
+  margin-bottom: 30px;
 }
 .footer-item {
   padding-right: 50px;
