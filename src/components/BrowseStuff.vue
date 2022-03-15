@@ -30,7 +30,7 @@ export default {
   },
   data(){
     return {
-      searchText: "tesla",
+      searchText: "Kanye",
       list: []
     }
   },
