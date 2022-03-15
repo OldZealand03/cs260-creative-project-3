@@ -1,6 +1,6 @@
 <template>
 <div>
-    <SavedArticles />
+    <SavedArticles :articles="this.$root.$data.saved"/>
 </div>
 </template>
 
@@ -13,20 +13,5 @@ export default {
   components: {
     SavedArticles
   },
-//   data() {
-//     return {
-//       country: '',
-//     }
-//   },
-//   computed: {
-//     products() {
-//       return this.$root.$data.products.filter(product => product.country === this.country);
-//     }
-//   },
-//   methods: {
-//     select(country) {
-//       this.country = country;
-//     }
-//   }
 }
 </script>
