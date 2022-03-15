@@ -11,7 +11,6 @@
       <button @click="callAPI">GO!</button>
     </div>
     </div>
-    <p>Why is the right side of the search box not colored? ^^^</p>
     <ArticleList :articles="list" />
   </div>
 </template>
@@ -31,7 +30,7 @@ export default {
   },
   data(){
     return {
-      searchText: "tesla",
+      searchText: "Kanye",
       list: []
     }
   },
