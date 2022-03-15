@@ -1,9 +1,19 @@
 <template>
-  <div class="saved">
-    <h1>Your Saved Articles</h1>
     <div class="wrapper">
+      <div class="articles">
+        <div class="title">
+          <h2>Your Saved Articles</h2>
+        </div>
+        <div class="article" v-for="article in this.$root.$data.saved" :key="article.id">
+          <div class="info">
+            <h3>{{ item.title}}</h3>
+            <p>{{ item.author}}</p>
+            <p>{{ item.source.name}}</p>
+          </div>
+          <button @click="deleteFromCart(article)" class="auto">Delete</button>
+        </div>
+      </div>
     </div>
-  </div>
 </template>
 
 <script>
@@ -11,13 +21,13 @@
 export default {
   name: "SavedArticles",
   props: {articles:Array},
-  data() {
-    return {
-      savedList: []
-    }
-  },
   methods: {
-
+    deleteFromCart(article) {
+      const index = this.$root.$data.saved.indexOf(article);
+      if (index > -1) {
+        this.$root.$data.saved.splice(index, 1);
+      }
+    },
  },
 };
 </script>

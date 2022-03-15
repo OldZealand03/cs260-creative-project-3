@@ -11,7 +11,6 @@
       <button @click="callAPI">GO!</button>
     </div>
     </div>
-    <p>Why is the right side of the search box not colored? ^^^</p>
     <ArticleList :articles="list" />
   </div>
 </template>
@@ -92,16 +91,16 @@ form {
 
 i {
   display: table-cell;
-  padding-left: 10px;
+  /* padding-left: 10px; */
   width: 1px;
 }
 
 button {
   height: 45px;
-  //background: #000;
-  //color: white;
-  border: 1px solid #ccc;
-  //border: none;
+  background: #000;
+  color: white;
+  /* border: 1px solid #ccc; */
+  /* border: none; */
 }
 
 input {
