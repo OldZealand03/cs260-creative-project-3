@@ -97,7 +97,7 @@ i {
 
 button {
   height: 45px;
-  background: #000;
+  background: #6242b9;
   color: white;
   /* border: 1px solid #ccc; */
   /* border: none; */
@@ -110,5 +110,10 @@ input {
   box-shadow: none !important;
   width: 100%;
   height: 40px;
+}
+
+.browse {
+  margin-left: 5%;
+  margin-right: 5%;
 }
 </style>
