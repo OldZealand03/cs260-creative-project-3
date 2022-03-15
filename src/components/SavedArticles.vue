@@ -6,11 +6,11 @@
         </div>
         <div class="article" v-for="article in this.$root.$data.saved" :key="article.id">
           <div class="info">
-            <h3>{{ item.title}}</h3>
-            <p>{{ item.author}}</p>
-            <p>{{ item.source.name}}</p>
+            <h3>{{ article.title}}</h3>
+            <p>{{ article.author}}</p>
+            <p>{{ article.source.name}}</p>
           </div>
-          <button @click="deleteFromCart(article)" class="auto">Delete</button>
+          <button @click="deleteFromSaved(article)" class="auto">Delete</button>
         </div>
       </div>
     </div>
@@ -20,9 +20,8 @@
 
 export default {
   name: "SavedArticles",
-  props: {articles:Array},
   methods: {
-    deleteFromCart(article) {
+    deleteFromSaved(article) {
       const index = this.$root.$data.saved.indexOf(article);
       if (index > -1) {
         this.$root.$data.saved.splice(index, 1);
@@ -42,6 +41,19 @@ export default {
 form {
   display: table;
   width: 100%;
+}
+
+.article {
+  margin: 10px;
+  margin-top: 50px;
+  width: 1200px;
+  display : inline-block;
+  box-sizing: border-box;
+  border : 1px solid black;
+  margin : 5px 5px 5px 5px;
+  padding : 5px 5px 5px 5px;
+  text-align: left;
+
 }
 
 i {

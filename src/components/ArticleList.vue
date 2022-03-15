@@ -3,8 +3,7 @@
     <div class="articles">
       <div class="article" v-for="item in articles" :key="item">
         <h3>{{ item.title}}</h3>
-        <p>{{ item.author}}</p>
-        <p>{{ item.source.name}}</p>
+        <p>{{ item.author}}, {{ item.source.name}}</p>
         <!-- Find a way to parse this date above ^^ -->
         <button class= "auto" @click="addToSaved(item)">Save Article</button>
       </div>

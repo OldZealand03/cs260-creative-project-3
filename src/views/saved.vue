@@ -1,6 +1,6 @@
 <template>
 <div>
-    <SavedArticles :articles="this.$root.$data.saved"/>
+    <SavedArticles/>
 </div>
 </template>
 
