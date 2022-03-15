@@ -27,6 +27,7 @@ export default {
   },
   methods: {
     addToSaved(item){
+      console.log(item)
       this.$root.$data.saved.push(item)
     },
  },
