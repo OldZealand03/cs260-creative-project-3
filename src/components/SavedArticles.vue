@@ -2,12 +2,12 @@
     <div class="wrapper">
       <div class="articles">
         <div class="title">
-          <h2>Your Saved Articles</h2>
+          <h2>Your Sources</h2>
         </div>
         <div class="article" v-for="article in this.$root.$data.saved" :key="article.id">
           <div class="info">
             <h3>{{article.title}}</h3>
-            <h4> <a target="_blank" :href="article.url">Source</a></h4>
+            <h4> <a target="_blank" :href="article.url">Link</a></h4>
           </div>
           <button @click="deleteFromSaved(article)" class="auto">Delete</button>
         </div>
