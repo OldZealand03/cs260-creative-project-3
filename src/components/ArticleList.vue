@@ -1,11 +1,9 @@
 <template>
   <div class="wrapper">
     <div class="articles">
-<<<<<<< HEAD
       <div class="article" v-for="item in articles" :key="item">
         <h3>{{ item.title}}</h3>
         <p>{{ item.author}}, {{ item.source.name}}</p>
-=======
       <div class="title">
         <h2>Results</h2>
       </div>
@@ -13,12 +11,11 @@
         <h3>{{ item.title}}</h3>
         <p>{{ item.author}}</p>
         <p>{{ item.source.name}}</p>
-        <p>{{  item.publishedAt  }}</p>
->>>>>>> e7a1a222bd3db40906dfe07ba66f3e14ba519cde
         <!-- Find a way to parse this date above ^^ -->
         <button class= "auto" @click="addToSaved(item)">Save Article</button>
       </div>
     </div>
+  </div>
   </div>
 </template>
 
