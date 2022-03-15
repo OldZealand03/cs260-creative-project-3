@@ -6,8 +6,8 @@
         </div>
         <div class="article" v-for="article in this.$root.$data.saved" :key="article.id">
           <div class="info">
-            <h3>{{ article.title}}</h3>
-            <p>{{ article.author}}  |  {{ article.source.name}}  |  <a target="_blank" :href="article.url">Source</a></p>
+            <h3>{{article.title}}</h3>
+            <h4> <a target="_blank" :href="article.url">Source</a></h4>
           </div>
           <button @click="deleteFromSaved(article)" class="auto">Delete</button>
         </div>
@@ -72,5 +72,10 @@ input {
 
 p {
   display: block,
+}
+
+h3, h4, button {
+  margin-left: 20px;
+  margin-bottom: 20px;
 }
 </style>
