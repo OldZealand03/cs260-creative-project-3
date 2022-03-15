@@ -2,10 +2,15 @@
   <div class="wrapper">
     <div class="articles">
       <div class="article" v-for="item in articles" :key="item">
+      <div class="leftStuff">
         <h3>{{ item.title}}</h3>
         <p>{{ item.author}}, {{ item.source.name}}</p>
         <!-- Find a way to parse this date above ^^ -->
         <button class= "auto" @click="addToSaved(item)">Save Article</button>
+      </div>
+        <div class = "articleImage">
+        <img :src="item.urlToImage"/>
+        </div>
       </div>
     </div>
   </div>
@@ -54,6 +59,18 @@ export default {
   padding : 5px 5px 5px 5px;
   text-align: left;
 
+}
+
+.leftStuff {
+  float: left;
+  width: 800px;
+}
+
+img {
+  width: 180px;
+  height: 140px;
+  float: right;
+  vertical-align: middle;
 }
 
 /* .product img {
