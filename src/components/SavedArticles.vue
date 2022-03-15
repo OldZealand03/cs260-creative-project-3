@@ -7,8 +7,7 @@
         <div class="article" v-for="article in this.$root.$data.saved" :key="article.id">
           <div class="info">
             <h3>{{ article.title}}</h3>
-            <p>{{ article.author}}</p>
-            <p>{{ article.source.name}}</p>
+            <p>{{ article.author}}     {{ article.source.name}}</p>
           </div>
           <button @click="deleteFromSaved(article)" class="auto">Delete</button>
         </div>
@@ -69,5 +68,9 @@ input {
   box-shadow: none !important;
   width: 100%;
   height: 40px;
+}
+
+p {
+  display: block,
 }
 </style>
